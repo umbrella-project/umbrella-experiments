@@ -2,7 +2,7 @@
 interfaceName1="spine401-eth1"
 interfaceName2="spine402-eth1"
 interval=10
-for i in {1..5}
+for i in {1..200}
 do
     echo $i
     sudo ifconfig $interfaceName1  down
