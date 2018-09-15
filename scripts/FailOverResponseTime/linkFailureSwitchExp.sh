@@ -9,7 +9,7 @@ do
 	ssh nebula106 "iperf3 -s -p 8080" &
 	sleep 3
 	ssh nebula105 "iperf3 -c 10.6.0.6 -t $simTime  -i 1 -p 8080 > client-$interval.log" &
-	numLoops= ($simTime/(2 * $interval)) + 1
+	numLoops=($simTime/(2 * $interval)) + 1
 	echo $numLoops
 	for i in {1..$numLoops}
 	do
